@@ -1,0 +1,220 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<title>Wireframe Readme</title>
+
+<!-- Meta tags -->
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="author" content="David Thomson" />
+
+<!-- Stylesheet -->
+	<link rel="stylesheet" href="settings.css" type="text/css" media="screen, projection">
+	<link rel="stylesheet" href="layout.css" type="text/css" media="screen, projection">
+
+</head>
+<body>
+<!-- NB: I haven't used ids on this document to give a demonstration of the use of some of the classes in the settings.css file -->
+<div class="container">
+
+	<div class="screen-l span-10 push-0 press-1">
+		<div class="pane-0 hang-1 lift-2">
+<h1 class="prepend-2">-Wireframe-</h1>
+<em class="doc append-3">Utility Documentation v0.6</em>
+		</div>
+	</div>
+
+		<div class="screen-l span-8 push-1 hang-1">
+			<div class="pane-0 squeeze-1 hang-1 lift-1 press-1">
+<h2 class="press-1">What is Wireframe?</h2>
+<p>Wireframe is a Cascading Stylesheet(CSS) utility built on top of all the marvelous work done in the <a href="http://code.google.com/p/blueprintcss/">Blueprint v0.4</a> release. Wireframe allows a web interface developer to quickly generate markup to suit the design specifications for any web development project.</p>
+<p>Additional core functionallity was introduced to address issues of horizontal alignment and form typesetting. While, other selectors were dumped and/or modified according to issues of browser behaviour and personal taste.</p>
+<p>Wireframe is  a utility that produces two style sheets:
+	<dl>
+<dt>settings.css</dt>
+<dd>Consolidated Blueprint framework file</dd>
+<dt>layout.css<dt>
+<dd>Markup document layout and styling file</dd>
+	</dl>
+			</div>
+		</div>
+
+
+		<div class="screen-l span-8 push-1">
+			<div class="pane-0 squeeze-1 hang-1 lift-1 press-1">
+<h2 class="press-1">Wireframe Assets</h2>
+<p>Here is a list of assests which are included in this release.</p>
+	<ul>
+<li><strong>wireframe.html</strong> - User interface file</li>
+<li><strong>readme.html</strong> - This readme file</li>
+<li><strong>wireframe.js</strong> - Script file</li>
+<li><strong>setting.css</strong> - Base stylesheet</li>
+<li><strong>layout.css</strong> - Support stylesheet</li>
+<li><strong>grid.png</strong> - Grid image</li>
+<li><strong>frame.png</strong> - Wireframe image</li>
+	</ul>
+<p>These files have all been used together to demonstrate to you how to use Wireframe itself. The wireframe.htm file has its markup cleaned up of extra style classes whereas, this readme file has not. This is to give you some idea of the use of the classes included in the setting.css which Wireframe generates.</p>
+			</div>
+		</div>
+
+
+		<div class="screen-l span-8 push-1">
+			<div class="pane-0 squeeze-1 hang-1 lift-1 press-1">
+<h2 class="press-1">Wireframe Changelog</h2>
+<p>Because this utility is still in its infancy I'm not going to document every signle change I make. However, this system is already moving away from Blueprint. The very nature of how the grid works has been evolved to deal with the existing one's shortcomings in its treatment of graphic design assests.</p>
+<p>The major improvement was to alter the mathematics involved in constructing the grid to allow for the successful transition to elastic layouts. Now, what was the old column, is defined as either a left or right floated screen. The append and prepend classes were changed to margins to allow for those creamy liquid centers.</p>
+			</div>
+		</div>
+
+
+		<div class="screen-l span-8 push-1">
+			<div class="pane-0 squeeze-1 hang-1 lift-1 press-1">
+<h2 class="press-1">How to Use Wireframe</h2>
+<p>The extra classes added to Blueprint in Wireframe allows a designer to use the grid to construct an interface with the classic screen/pane structure. All structural positioning is controled by a screen while, all interface alignment is done through the pane. This approach allows for the creation of perfectly typesetted forms with consistant page graphics.</p>
+<p>I'm not going to waffle on about the screen/pane design approach or the ins and outs of using the classes in this system. Basically, you either understand cascading stylesheets and application interface development concepts, or you don't. This utiliy will not make you a better or more capable developer. It's intended goal is to speed up the development process.</p>
+<p>The following is a description of the steps involved in the development cycle of an (X)HTML/CSS interface  using Wireframe.</p>
+	<ol class="mark">
+<li>Define typesettings</li>
+<li>Specify wieframes</li>
+<li>Output settings.css file</li>
+<li>Create grid image</li>
+<li>Develop markup code</li>
+<li>Add ids to structural elements</li>
+<li>Output layout.css file</li>
+<li>Consolidate additional css selectors in layout.css</li>
+<li>Comment out images in settings.css file</li>
+	</ol>
+			</div>
+		</div>
+
+
+		<div class="screen-l span-8 push-1">
+			<div class="pane-0 squeeze-1 hang-1 lift-1 press-1">
+<h2 class="press-1">One Step at a Time</h2>
+<h3>1. Define typesettings</h3>
+<p>The Wireframe grid is constructed dynamically using the <strong>Typesettings</strong> controls. The decision was taken to reduce the entire grid down to a single grid unit and then build the grid back up from there. The grid unit is referrenced directly to the font-size, which, is one and a half times the font size in pixels.</p>
+	<dl>
+<dt>Font Size</dt>
+<dd>Font size determines the size of the grid unit. The grid unit size is equal to the font size times one and a half.</dd>
+<dt>Column Width</dt>
+<dd>Column width defines the number of grid units wide each column is. Using the grid background, the columns are the blue vertical stripes.</dd>
+<dt>Column Gutter</dt>
+<dd>Column gutter defines the number of grid units wide each column gutter is. Using the grid background, the gutters are the white vertical stripes.</dd>
+<dt>No. Columns</dt>
+<dd>The number of columns defines the default width on the container class in columns, usually used to specify the page width. The container class has been deliberately kept low in the stylesheet hierarchy for easy override in specific use situations.</dd>
+	</dl>
+
+<h3>2. Specify wireframes</h3>
+<p>The <strong>Wireframes</strong> controls specify exactly how many additional stylesheet classes are added to position any pane &lt;div&gt; content. Obviously, some design concepts are going to require more positional classes. These controls will reduce code bloat for 'lite' positioning designs.</p>
+	<dl>
+<dt>Max Grid Hang</dt>
+<dd>Maximum amount of hang available on an element. Hang is an element's top padding in px.</dd>
+<dt>Max Grid Lift</dt>
+<dd>Maximum amount of lift available on an element. Lift is an element's bottom padding in px.</dd>
+<dt>Max Grid Press</dt>
+<dd>Maximum amount of press available on an element. Press is an element's bottom margin in px.</dd>
+<dt>Max Grid Stretch</dt>
+<dd>Maximum amount of stretch available on an element. Stretch is an element's height in em.</dd>
+	</dl>
+
+<h3>3. Output settings.css file</h3>
+<p>Once the typesetting and wireframes have been defined to your satisfaction, click on the <strong>Options</strong> radio selector and at the <strong>Settings CSS</strong> control choose <strong>Output</strong>. Your settings.css file will be generated and output into the <strong>CSS Code</strong> textarea Simply click the <strong>Select</strong> button to highlight the code and hotkey copy it. Then  go to your favourite code editor, open up a new file and hotkey paste it in. Save the file as whatever name you like and you're ready to develop your document markup.</p>
+<p>If you are unhappy with your settings, you can always change them and output a new settings.css file. If you want to start again from scratch you can simply click the <strong>Reset</strong> button for <strong>Settings CSS </strong> and off you go.</p>
+
+<h3>4. Create grid image</h3>
+<p>Before you do any markup development with the settings.css file, you are going to need a grid image to work with. So, open an image editor to work in. I recommend Microsoft Paint because it is small, fast and pixel gridded. Now, Open a new file to the size of one grid unit high and a width of one column width plus one gutter width. You will find these dimensions defined at the top of your settings.css file.</p>
+<p>Fill the entire image in the colour you want your columns to be. Then, using a white brush, draw in the column gutter on the right hand side sides of the image the width of the gutter. Next, choose a new colour and draw the rule along the bottom of the image one pixel high. Save as a png file, or any other type you prefer, into your development folder.</p>
+<p>Finally, you need to go back to the settings.css file and at the <strong>/* Images */</strong> section, edit the image file path of the grid image you have created. Optionally, if you are doing wireframes as one stage in the development of your web project, you can add a frame image which, is a single pixel in the colour of the wireframe's bottom rule.</p>
+
+<h3>5. Develop markup code</h3>
+<p>Develop your markup code template as you normally would with vanilla Blueprint. Use any classes available in settings.css to control the positioning of elements within the page. With the extra wireframe classes you can position form elements more precisely and consistanly with greater attention to horizontal alignment.</p>
+
+<h3>6. Add ids to structural elements</h3>
+<p>All structural classes should now have an id attribute attached to define their semantic intention. Starting with the first element, copy its id  and paste it into the <strong>Selector</strong> text input in the <strong>Identifiers</strong> control panel. Now copy the entire class definition of that element and paste it into the <strong>Classes</strong> input.</p>
+<p>Now choose <strong>Enter</strong>.</p>
+<p>That id, and the classes associated with it, are processed and held in the Wireframe document so, DO NOT REFRESH the page during the entirely of this process. In the <strong>Overflow</strong> text input, you will get output of any classes that are not involved in to core positioning class group. Paste those extra classes back into that structural element's class attribute.</p>
+<p>Repeat this id/classes uploading process for each structural element in your markup.</p>
+
+<h3>7. Output layout.css file</h3>
+<p>When all the ids and associated classes have been uploaded, go to the <strong>Options</strong> control panel and click the <strong>Output</strong> button for <strong>Layout CSS</strong>. The layout.css file will be generated and outputted into the <strong>CSS Code</strong> textarea. Like the settings.css file, choose <strong>Select</strong>, then hotkey copy and paste into your favourite text editor and save as your desired file name.</p>
+<p>One important point about using the two Wireframe stylesheets. They should ALWAYS be the first stylesheets to be imported into your page markup. And, in the order of settings.css first followed by layout.css.</p>
+
+<h3>8. Consolidate additional css selectors in layout.css</h3>
+<p>If you want, you can go back to the <strong>Identifiers</strong> control panel and use it to further remove markup class bloat by converting identical class combinations existing in elements to a single class that you can output and add to the layout.css file.</p>
+<p>I made a conscious development decision not to have an either/or in the conversion algorithm between ids and classes. The basic reason why was the disruptive effects it can have on workflow and the stylesheet hierarchy. Arbitrary mixing of classes with ids has the potential for undesired browser display behaviour. Again, this utility does not teach you how to develop in CSS.</p>
+<p>My recommendation is to do the classes separately as identifiers, output the code and in a separate document, do a find and replace of the id pointers(#) with the class pointers(.). Then, append this modified code to the existing pre-generated layout.css file. Below these additional classes, you can then proceed to add your own stylesheet declarations.</p>
+<p>At the end of the day, it was quicker to have the utility work this way, than have a more sophisticated utility which would inevitably make the development process longer, more disorganised and painful.</p>
+
+<h3>9. Comment out images in settings.css file</h3>
+<p>The final step in the development cycle using Wireframe is to actually remove the grid images for the page. They have been isolated at the top of the setting.css file for your(...OK, my own) convenience under the <strong>/* Images */</strong> comment. You can simply comment out those two lines of code and, voila, your grid will disappear.</p>
+<p>All you need to do now is insert your graphic design assests into the page and you are ready to publish.</p>
+
+			</div>
+		</div>
+
+
+		<div class="screen-l span-8 push-1">
+			<div class="pane-0 squeeze-1 hang-1 lift-1 press-1">
+<h2 class="press-1">Some Q & A</h2>
+<h3>1. Can I change Wireframe's default settings?</h3>
+<p>If you know only a little bit about javascript, you can go into the wireframe.js and wireframe.html files and edit the default settings to your own satisfaction, rather than always changing them from what I've defined as default.</p>
+<p>You can find the default settings in the <strong>&lt;form name="defaults"&gt;</strong> element and in the <strong>UTILITY CONSTANTS</strong> section. It is important that you change these values in both places.</p>
+
+<h3>2. Can I change the default path of css images?</h3>
+<p>Yes, just goto the top of the wireframe.js file and you will find the image paths declared in the <strong>UTILITY CONSTANTS</strong> section. Simply replace the defaults with your own. Alternatively, you  can simply replace the image file paths in the settings.css file after you have generated it.</p>
+
+<h3>3. How do I reincorporate Blueprint classes you ditched?</h3>
+<p>In the <strong>generateSettingsStylesheetCode()</strong> function in wireframe.js find the concantenating construction of <strong>sStylesheet</strong> and insert a new line at the point in which you want the stylesheet selector to appear. In fact, you can do this for any new selector you want to add to the settings.css output file. And, you can even add custom selectors to the layout.css file in the same way, placed outside the <strong>generateLayoutStylesheetCode()</strong> function's main loop.</p>
+
+<h3>4. Can I add new classes into identifier selectors?</h3>
+<p>Yes you can, and it's a reasonably straight forward process. The first step is to locate the identfiers table, <strong>&lt;table id="identifiers"&gt;</strong>, in the wireframe.html file. What you need to do is add a new table row, preferrably at the end, of the class name you are going to define in the settings.css file.</strong> If the new class is a stepped value <em>classname-#</em> then, make sure you are only inserting the actual class name into this table and not the suffix demarkation.</p>
+<p>Next, you need for the utility to output the value of your new classes in both the settings.css and layout.css files. The <strong>generateSettingsStylesheetCode()</strong> function generates the settings.css so you simply insert the line of code for your new class into it. If the class is stepped then you will have to create a new function to insert into the line of code you want to output it on. For the novice javascripters out there, there are enough of these functions used for you to be able to template your own.</p>
+<p>To include your new class in the layout.css file, you need to modify the <strong>generateLayoutStylesheetCode()</strong> function. To do this, you will need to increment the <strong>nNumOfClasses</strong> variable by one per additional class and then create an new matching <strong>if</strong> statement for the class you want to insert. The array holding the markup properties is <strong>aStyleValues</strong> and each position holds the following properties:</p>
+	<ul>
+<li>aStyleValues[0] - position</li>
+<li>aStyleValues[1] - float</li>
+<li>aStyleValues[2] - width</li>
+<li>aStyleValues[3] - height</li>
+<li>aStyleValues[4] - margin-top</li>
+<li>aStyleValues[5] - margin-right</li>
+<li>aStyleValues[6] - margin-bottom</li>
+<li>aStyleValues[7] - margin-left</li>
+<li>aStyleValues[8] - padding-top</li>
+<li>aStyleValues[9] - padding-right</li>
+<li>aStyleValues[10] - padding-bottom</li>
+<li>aStyleValues[11] - padding-left</li>
+<li>aStyleValues[12] - text-align</li>
+<li>aStyleValues[13] - clear</li>
+	</ul>
+<p>If you are going to add a new style property then add it to a new array index and don't forget to include that property in the construction of the <strong>sStylesheet</strong> string.</p>
+<p>One important thing to note, all the properties except for margin and padding are assigned as full strings on identification match. Whereas, margin and padding are shortened and re-processed near the end of the main function loop to ensure the CSS output is correct. So, watch out for this logic if you are going to add classes with margin and padding properties.</p>
+			</div>
+		</div>
+
+
+		<div class="screen-l span-8 push-1 press-1">
+			<div class="pane-0 squeeze-1 hang-1 lift-1">
+<h2 class="press-1">Future Modifications</h2>
+<p>This utility was a quick and dirty response to some deficiencies of my development experience with Blueprint. The css and js codebase is nowhere near where I would like them to be. This would be my wish list for the next iteration of the developement cycle of this utility:</p>
+	<ul class="mark">
+<li>Additional Options controls over element Typography</li>
+<li>Proper interface building javascript routines</li>
+<li>Possible migration over to php allowing auto-generation of grid images</li>
+<li>AJAX control over parameter cataloging and persistancy</li>
+<li>Possibly the inclusion of my javascript debuging module</li>
+<li>Maybe, even a drag 'n drop wireframe builder using script.acoul.us...</li>
+	</ul>
+<p>However, I can't promise I'll actually do any more work on this utility as it's original intention was to improve my own personal development cycle using Blueprint(the CSS framework the rest of us were too lazy to create). Maybe someone else will take the ball and run with it. ;)</p>
+			</div>
+		</div>
+
+
+		<div class="screen-l span-10 push-0">
+			<div class="pane-0 hang-1 lift-1 text-r">
+<p class="append-1 press-0">Developed by David Thomson</p>
+			</div>
+		</div>
+
+</div>
+
+</body>
+</html>

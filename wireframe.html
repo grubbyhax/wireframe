@@ -1,0 +1,264 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<title>Wireframe</title>
+
+<!-- Meta tags -->
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="author" content="David Thomson" />
+
+<!-- Stylesheet -->
+	<link rel="stylesheet" href="settings.css" type="text/css" media="screen, projection">
+	<link rel="stylesheet" href="layout.css" type="text/css" media="screen, projection">
+
+<!-- Javascript -->
+	<script src="wireframe.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		window.onload = function()
+		{
+			initialiseInterface();
+		};
+	</script>
+
+</head>
+<body>
+
+<div id="data">
+	<form name="defaults">
+<input type="hidden" id="FontSize" value="12" />
+<input type="hidden" id="ColumnWidth" value="3" />
+<input type="hidden" id="ColumnGutter" value="1" />
+<input type="hidden" id="Columns" value="10" />
+<input type="hidden" id="MaxGridHang" value="5" />
+<input type="hidden" id="MaxGridLift" value="5" />
+<input type="hidden" id="MaxGridPress" value="5" />
+<input type="hidden" id="MaxGridStretch" value="15" />
+<input type="hidden" id="WideFormSpan" value="6" />
+<input type="hidden" id="WideFormLabel" value="3" />
+<input type="hidden" id="WideFormInput" value="3" />
+	</form>
+
+	<table id="typography">
+		<tr>
+<th>element</th>
+<th>margin-top</th>
+<th>margin-right</th>
+<th>margin-bottom</th>
+<th>margin-left</th>
+<th>padding-top</th>
+<th>padding-right</th>
+<th>padding-bottom</th>
+<th>padding-left</th>
+		</tr>
+		<tr>
+<th>p</th>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+		</tr>
+		<tr>
+<th>ul</th>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+		</tr>
+		<tr>
+<th>ol</th>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+		</tr>
+		<tr>
+<th>dl</th>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+		</tr>
+		<tr>
+<th>li</th>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+		</tr>
+		<tr>
+<th>dt</th>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+		</tr>
+		<tr>
+<th>dd</th>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+		</tr>
+		<tr>
+<th>img</th>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+		</tr>
+	</table>
+
+	<table id="wideforms">
+		<tr>
+<th>span</th>
+<th>label</th>
+<th>input</th>
+		</tr>
+	</table>
+
+	<table id="identifiers">
+		<tr>
+<th>identifier</th>
+<th>container</th>
+<th>screen</th>
+<th>pane</th>
+<th>drop</th>
+<th>span</th>
+<th>append</th>
+<th>prepend</th>
+<th>pull</th>
+<th>push</th>
+<th>text</th>
+<th>squeeze</th>
+<th>hang</th>
+<th>lift</th>
+<th>press</th>
+<th>stretch</th>
+		</tr>
+	</table>
+</div>
+
+<div class="container">
+
+	<div id="bann_scrn" class="screen-l">
+		<div id="bann_pane" class="pane-0">
+<h1 class="prepend-2">-Wireframe-</h1>
+<em class="doc pull-3">CSS Library Generator</em>
+		</div>
+	</div>
+
+
+
+	<div id="subh_scrn" class="screen-l">
+		<div id="subh_pane" class="pane-0">
+<p class="press-0 text-j">Developed from <strong>Blueprint</strong>, this utility allows simple paper card style wireframing to provide greater flexibilty and productivity for web interface designers and developers.</p>
+		</div>
+	</div>
+
+
+
+	<div id="slct_scrn" class="screen-l">
+		<div id="slct_pane" class="pane-0">
+			<form id="selectform">
+				<table>
+					<tr>
+<th class="hang-1 lift-1">Select</th>
+					</tr>
+					<tr class="stretch-2">
+<td><input id="select_typesettings" type="radio" name="select" /><label for="select_typesettings">Typesettings</label></td>
+					</tr>
+					<tr class="stretch-2">
+<td><input id="select_typography" type="radio" name="select" /><label for="select_typography">Typography</label></td>
+					</tr>
+					<tr class="stretch-2">
+<td><input id="select_wideforms" type="radio" name="select" /><label for="select_wideforms">Wideforms</label></td>
+					</tr>
+					<tr class="stretch-2">
+<td><input id="select_wireframes" type="radio" name="select" /><label for="select_wireframes">Wireframes</label></td>
+					</tr>
+					<tr class="stretch-2">
+<td><input id="select_identifiers" type="radio" name="select" /><label for="select_identifiers">Identifiers</label></td>
+					</tr>
+					<tr class="stretch-2">
+<td><input id="select_options" type="radio" name="select" /><label for="select_options">Options</label></td>
+					</tr>
+				</table>
+			</form>
+		</div>
+	</div>
+
+
+
+	<div id="ctrl_scrn" class="screen-l">
+		<div id="ctrl_pane" class="pane-0">
+			<form id="settingform">
+
+			</form>
+		</div>
+	</div>
+
+
+
+	<div id="code_scrn" class="screen-l">
+		<div id="code_pane" class="pane-0">
+			<form>
+				<table class="tabledform">
+					<tr>
+<th class="hang-1">CSS Code</th>
+					</tr>
+					<tr>
+<td><textarea id="codeoutput"></textarea></td>
+					</tr>
+					<tr>
+<td class="squeeze-h"><input id="select_output" type="button" class="button" value="Select" /></td>
+					</tr>
+				</table>
+			</form>
+		</div>
+	</div>
+
+
+
+	<div id="foot_scrn" class="screen-l">
+		<div id="foot_pane" class="pane-0">
+<a href="readme.html" class="pull-1 doc">Documentation v0.6</a>
+		</div>
+	</div>
+
+</div>
+
+
+</body>
+</html>
